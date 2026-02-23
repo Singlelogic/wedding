@@ -147,8 +147,12 @@ a[href^="tel"] {
   text-align: center;
   font-family: 'Great Vibes', cursive;
   font-size: 2.5rem;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #807E59;
+}
+
+.section-subtitle:not(:first-child) {
+  margin-top: 40px;
 }
 
 .section-image {
