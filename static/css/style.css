@@ -1,0 +1,456 @@
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Главный экран */
+.main-section {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../images/main.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  color: white;
+  position: relative;
+}
+
+.welcome-text {
+  font-family: "Great Vibes", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.couple-names {
+  font-size: 5rem;
+  font-weight: normal;
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(0.95);
+  animation: elegantAppear 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes elegantAppear {
+  0% {
+    opacity: 0.2;
+    filter: blur(8px);
+    transform: scale(0.70);
+  }
+  50% {
+    opacity: 0.4;
+    filter: blur(4px);
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.ampersand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  margin: 0 15px;
+}
+
+.initials-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.initials {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5rem;
+  margin-bottom: 15px;
+}
+
+.engagement-date {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Секция */
+.section {
+  padding: 30px 0;
+  background: linear-gradient(to bottom, #FFFFFF, #939161);
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #747249;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.handwritten-style {
+  font-family: 'Playfair Display', serif;
+  padding: 0px 30px;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.message-box {
+  position: relative;
+  z-index: 2;
+}
+
+.handwritten-text {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #4a4a4a;
+}
+
+.accent-text-header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  color: #6B6E4B;
+  display: inline-block;
+}
+
+.accent-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #6B6E4B;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.calendar-svg {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  opacity: 0.7;
+}
+
+/* Программа дня */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.timeline-icon {
+  background-color: #6B6E4B;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #6B6E4B;
+}
+
+.timeline-time {
+  font-size: 1.2rem;
+  color: #6B6E4B;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.timeline-description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #6B6E4B;
+  color: black;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(107, 110, 75, 0.3);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.map-button:hover {
+  background-color: #525033;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(107, 110, 75, 0.4);
+}
+
+.map-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(107, 110, 75, 0.4);
+}
+
+.map-button i {
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+/* Форма RSVP
+.rsvp-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.rsvp-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f3f0;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b76e79;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #b76e79;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #a65a65;
+}
+*/
+
+/* Футер */
+.footer {
+  padding: 50px 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-love {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-love i {
+  color: #ffd1dc;
+  margin: 0 10px;
+}
+
+.footer-contact a {
+  color: #ffd1dc;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .couple-names {
+    font-size: 3.5rem;
+  }
+
+  .calendar-svg {
+    max-width: 90vw;
+  }
+
+  .ampersand {
+    font-size: 3rem;
+  }
+
+  .initials {
+    font-size: 3.5rem;
+  }
+
+  .initials-container {
+    padding: 20px 30px;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .section-image {
+    max-width: 90%;
+    margin: 15px auto;
+    border-radius: 10px;
+  }
+
+  .map-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .rsvp-form {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-svg {
+    max-width: 90vw;
+  }
+
+  .initials {
+    font-size: 2.8rem;
+  }
+
+  .welcome-text {
+    font-size: 2.5rem;
+  }
+
+  .section-image {
+    max-width: 320px;
+  }
+}
